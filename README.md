@@ -1,22 +1,29 @@
 # TECSUP-DAW-2021-2-B
 DESARROLLO DE APLICACIONES WEB GRUPO B - NIKOLL BONILLA
-LABORATORIO 4: JSP Y ACCESO A BASE DE DATOS
+LABORATORIO 5: JAVA STANDARD TAG LIBRARY - JSTL 
 
-Se implento una aplicacion web que se conecta con MySQL
+1.	Se creo un nuevo archivo JSP denominado: FormOperaciones
 
-![alt text](img/bd.PNG)
+	1.1. Este archivo permite pedir dos números y elegir una operación a realizar, al hacer clic en el botón Calcular muestra el resultado de operación
 
-- Permite validar el usuario
-  
-![alt text](img/validar.png)
+    ![alt text](img/operaciones.PNG)
+    
+    1.2. La acción es controlada por el archivo Operaciones.java
 
-- No permitira el acceso hasta la validacion
-  
-![alt text](img/cargos_no.png)
+2.	En index.html hay un enlace a todos los archivos JSP creados.
 
-![alt text](img/areas_no.PNG)
+    ![alt text](img/index.PNG)
 
-- Permite ver el nombre del usuario logeado y su estado(Activo, No Activo) y cerrar sesion, asi como cambiar el color de las filas impares y pares.
+3.	En el archivo jstl_sql_a, en cada fila mostrada se muestra dos botones: uno para editar y otro para eliminar
 
-![alt text](img/lista.png)
+    ![alt text](img/sql.PNG)
+
+    3.1.	Al hacer clic en Editar se muestra una pagina con los datos seleccionados (el campo estado se muestra en una lista para seleccionar A o X), y se muestra dos botones: Guardar y Cancelar. Si se guarda o cancela la acción se dirige a la pagina donde se listan los usuarios.
+
+    ![alt text](img/editar.PNG)
+
+    3.2.	Al hacer clic en Eliminar, se borra el elemento y mostrara la lista de usuarios actualizados.
+
+    3.3.	Estas acciones son controladas por el archivo Eliminar.java para eliminar, y Editar.java y update.java para editar.
+
   
