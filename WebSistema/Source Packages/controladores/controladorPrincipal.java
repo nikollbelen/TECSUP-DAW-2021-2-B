@@ -301,8 +301,13 @@ public class controladorPrincipal extends HttpServlet {
                     IMatriculaDAO dao = new MatriculaDAOImpl();
                     arrMatriculas = dao.obtener();
                     request.setAttribute("arrMatriculas", arrMatriculas);
-                    request.getRequestDispatcher("/operaciones/matriculaMostrarMatriculas.jsp").forward(
+                    if ( request.getParameter( "reporte" ).compareTo( "true" ) == 0 ) {
+                        request.getRequestDispatcher("/reportes/formularioListarDetallesMatricula.jsp").forward(
                             request, response);
+                    }else if ( request.getParameter( "reporte" ).compareTo( "false" ) == 0 ) {
+                        request.getRequestDispatcher("/operaciones/matriculaMostrarMatriculas.jsp").forward(
+                            request, response);
+                    }
                 } else if (request.getParameter("boton").compareTo("Buscar") == 0) {
                     List<Matriculas> arrMatriculas = new ArrayList<Matriculas>();
                     Matriculas matricula = new Matriculas();
